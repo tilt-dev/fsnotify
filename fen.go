@@ -8,6 +8,7 @@ package fsnotify
 
 import (
 	"errors"
+	"fmt"
 )
 
 // Watcher watches a set of files, delivering events to a channel.
@@ -25,7 +26,7 @@ func NewWatcher() (*Watcher, error) {
 // Must be called before Add/Remove.
 // Returns an error on failure.
 func (w *Watcher) SetRecursive() error {
-	return fmt.Error("Not supported")
+	return fmt.Errorf("Not supported")
 }
 
 // Close removes all watches and closes the events channel.
